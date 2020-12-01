@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +21,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "engines" : {
+    "node" : "12.18.2"
   }
 }
